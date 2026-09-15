@@ -1,26 +1,21 @@
-#Scenario Simulate a savings plan one week at a time until the account reaches or exceeds a goal. 
+#goal = float(input("Enter your overall goal: $")).strip()
+#week1 = (input("Enter your deposit for week 1: $"))
+#week2 = float(input("Enter your deposit for week 2: $"))
+#week3 = float(input("Enter your deposit for week 3: $"))
 
-#Your program must 
+week_num = 1
 
-#☐ Ask for a positive savings goal and a positive weekly deposit. 
-#☐ Validate both inputs before starting the simulation. 
-#☐ Increase the week number and balance during each loop cycle. 
-#☐ Display the week number and balance every week. 
-#☐ Format every money value with a dollar sign, commas, and two decimal places. 
-#☐ After the goal is reached, report the number of weeks and the amount above the goal. 
+while True:
+    goal = input("Enter your overall goal: $").strip()
+    week1 = (input("Enter your deposit for week 1: $"))
+    if not goal.isdigit() or week1.isdigit():
+        print("Not a number, please try again")
+        week_num += 1
+    else:
+        print(f"You are on week {week_num} with ${week1} saved.")
+        break
 
-#Example output Your exact numbers will depend on the values entered. 
-
-#Week 1: $125.50 
-#Week 2: $251.00 
-#Week 3: $376.50 
-
-
-#Challenge Allow the user to enter an optional starting balance. Validate it so that it cannot be negative. 
-
-#Final Check 
-#☐ Every while loop can eventually stop. 
-#☐ Every value that controls a loop is updated inside the loop. 
-#☐ Invalid input does not crash the program or affect totals. 
-#☐ Variable names clearly describe the values they store. 
-#☐ Output is easy for a user to understand. 
+while True:
+    week2 = input("Enter your deposit for week 2: $")
+    if not week2.isdigit():
+        print("Not a number, please try again")
